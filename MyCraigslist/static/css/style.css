@@ -1,0 +1,27 @@
+.footer-page{
+    margin: 10px;
+}
+
+.card {
+height: 400px;
+overflow: hidden;
+}
+
+.card-image{
+height: 250px;
+overflow: hidden;
+}
+
+.flex-container {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.flex-container > div {
+  background-color: #f1f1f1;
+  width: 100px;
+  margin: 10px;
+  text-align: center;
+  line-height: 75px;
+  font-size: 30px;
+}

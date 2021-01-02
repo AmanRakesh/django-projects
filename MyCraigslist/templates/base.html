@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+{%load static%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>The Backyard School</title>
+    <meta name="viewport" content="width=device-width, intial-scale=1">
+    <link rel="stylesheet" href="{% static 'css/style.css'%}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+</head>
+<body>
+    <nav>
+        <div class="container nav-wrapper">
+        <a href="/" class="brand-logo">The Backyard School's Craigslist</a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a href="/">Home</a></li>
+        </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="row">
+            <div class="col s4">
+                <div class="center">
+                    <i class="large material-icons" style="color: #4caf50;">flash_on</i>
+                    <p>Robust Webscraper</p>
+                    <p class="light center">Fast and Accurate</p>
+                </div>
+            </div>
+                <div class="col s4">
+                <div class="center">
+                    <i class="large material-icons" style="color: #ffc107;">developer_mode</i>
+                    <p>Materialize Theme</p>
+                    <p class="light center">Made with a beautiful GUI</p>
+                </div>
+            </div>
+                <div class="col s4">
+                <div class="center">
+                    <i class="large material-icons" style="color: #d84315;">web</i>
+                    <p>MultiFunctionality</p>
+                    <p class="light center">Get a variety of Results</p>
+                </div>
+            </div>
+            <div class="center">
+                <h3>What do you want our Craigslist to do..??</h3>
+            </div>
+        </div>
+
+        <div class="container">
+            <form action="{% url 'new_search' %}" method="post">
+                {% csrf_token %}
+                <input type="text" name="search" placeholder="search">
+                <button class="btn waves-effect red lighten-2" type="submit" name="searchButton" id="searchButton">Submit
+                  <i class="material-icons right">flash_on</i>
+                </button>
+            </form>
+        </div>
+
+
+
+
+    {% block content %}
+
+    {% endblock content %}
+
+    </div>
+
+
+    <footer class="page-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col l6 s12">
+            <h5 class="white-text">The Backyard School</h5>
+            <p class="grey-text text-lighten-4">Made for India<br>For the people of India</p>
+          </div>
+          <div class="col l4 offset-l2 s12">
+            <h5 class="white-text">About Us</h5>
+            <ul>
+              <li><a class="grey-text text-lighten-3" href="#!">About Us</a></li>
+              <li><a class="grey-text text-lighten-3" href="#!">Contact Us</a></li>
+              <li><a class="grey-text text-lighten-3" href="#!">Terms & Condition</a></li>
+              <li><a class="grey-text text-lighten-3" href="#!">FAQ</a></li>
+            </ul>
+          </div>
+        </div>
+        </div>
+      </div>
+      <div class="footer-copyright">
+        <div class="container">
+        © 2021 Copyright | All Rights Reserved
+        <a class="grey-text text-lighten-4 right" href="#!">Sitemap</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+</body>
+</html>

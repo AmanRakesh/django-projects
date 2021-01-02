@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{%load static%}
+{% block content %}
+   <h3 style="text-align: center;">{{ search | title }}</h3>
+   <div class="row">
+       <div class="flex-container">
+
+    {% for eachLink in links %}
+          <div class="col s4">
+             <div class="card">
+              <div class="card-image">
+                <a href="{{eachLink.2}}"><img src="{{eachLink.0}}" alt="Unable to Load"></a>
+              </div>
+              <div class="card-content">
+                  <p><a href="{{eachLink.1}}" target="_blank">Download Now <i class="material-icons right">file_download</i></a></p>
+              </div>
+            </div>
+          </div>
+    {% endfor %}
+   </div>
+   </div>
+
+{% endblock %}
