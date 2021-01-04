@@ -3,8 +3,6 @@ from django.utils.http import urlquote_plus
 from . import models
 from .parserLogic import pexelsParser, unsplashParser
 
-CRAIGSLIST_BASIC_URL = 'https://losangeles.craigslist.org/search/?query={}'
-
 def home(request):
     return render(request, 'base.html')
 

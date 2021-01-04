@@ -20,5 +20,5 @@ from craigslist import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('craigslist.urls'))
+    path('', include('craigslist.urls')),
 ]
